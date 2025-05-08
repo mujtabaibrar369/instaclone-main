@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - SnapVerse
+name: Build and deploy Node.js app to Azure Web App - snapverse
 
 on:
   push:
@@ -60,15 +60,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DB6D4C13BE1A402894AFD5A2EBF040A5 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A28C60EDA48C417D9CAD4E6E1A438239 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_080A82A7738348E0B3A2E38A5AC11681 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_825B3C80F2FC45DD8CF7AB329FE6BBC1 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_1C12C3B1283449C19600FD5ABC46E20C }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_ADEC2DA4E9064227A89769CBB955307B }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'SnapVerse'
+          app-name: 'snapverse'
           slot-name: 'Production'
           package: .
           
